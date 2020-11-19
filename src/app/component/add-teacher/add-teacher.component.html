@@ -1,0 +1,78 @@
+<div class="container">
+  <br><br><br>
+  <h1>Enter Teacher Information</h1>
+  <mat-divider></mat-divider>
+  <br>
+  <form [formGroup]="teacherForm">
+  <mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input
+      type="text"
+      name="name"
+      matInput
+      formControlName="name"
+      placeholder="name"
+    />
+    <mat-error *ngIf="name && name.invalid && name.touched">name is required.</mat-error>
+  </mat-form-field>
+  <br><br>
+  <mat-form-field appearance="fill">
+    <mat-label>Subject</mat-label>
+    <input
+      type="text"
+      name="subject"
+      matInput
+      formControlName="subject"
+      placeholder="subject"
+    />
+    <mat-error *ngIf="subject && subject.invalid && subject.touched">subject is required.</mat-error>
+  </mat-form-field>
+  <br><br>
+  <mat-form-field appearance="fill">
+    <mat-label>Department</mat-label>
+    <input
+      type="text"
+      name="department"
+      matInput
+      formControlName="department"
+      placeholder="department"
+    />
+    <mat-error *ngIf="department && department.invalid && department.touched">department is required.</mat-error>
+  </mat-form-field>
+  <br><br>
+  <mat-form-field appearance="fill">
+    <mat-label>Shift</mat-label>
+    <input
+      type="text"
+      name="shift"
+      matInput
+      formControlName="shift"
+      placeholder="shift"
+    />
+    <mat-error *ngIf="shift && shift.invalid && shift.touched">shift is required.</mat-error>
+  </mat-form-field>
+  <br><br>
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input
+      type="email"
+      name="email"
+      matInput
+      formControlName="email"
+      placeholder="email"
+    />
+    <mat-error *ngIf="email && email.invalid && email.touched">email is required.</mat-error>
+  </mat-form-field>
+  <br><br>
+  </form>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="onSubmit()"
+    [disabled]="teacherForm.invalid"
+    style="width: 300px; padding: 10px">
+    Save
+  </button>
+  <br><br><br>
+  <br><br><br>
+</div>

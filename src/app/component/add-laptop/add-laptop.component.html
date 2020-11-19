@@ -1,0 +1,85 @@
+<div class="container">
+  <br><br><br>
+  <h1>Enter Laptop Information</h1>
+  <mat-divider></mat-divider>
+  <br>
+  <form [formGroup]="laptopForm">
+<!--    brandName-->
+    <mat-form-field appearance="fill">
+      <mat-label>Brand name</mat-label>
+      <input
+        type="text"
+        name="brandName"
+        matInput
+        formControlName="brandName"
+        placeholder="brand name"
+      />
+      <mat-error *ngIf="brandName && brandName.invalid && brandName.touched">brand name is required.</mat-error>
+    </mat-form-field>
+    <br><br>
+<!--    ram-->
+    <mat-form-field appearance="fill">
+      <mat-label>Ram</mat-label>
+      <input
+        type="number"
+        name="ram"
+        matInput
+        formControlName="ram"
+        placeholder="ram"
+      />
+      <mat-error *ngIf="ram && ram.invalid && ram.touched">ram is required.</mat-error>
+    </mat-form-field>
+    <br><br>
+<!--    rom-->
+    <mat-form-field appearance="fill">
+      <mat-label>Rom</mat-label>
+      <input
+        type="number"
+        name="rom"
+        matInput
+        formControlName="rom"
+        placeholder="rom"
+      />
+      <mat-error *ngIf="rom && rom.invalid && rom.touched">rom is required.</mat-error>
+    </mat-form-field>
+    <br><br>
+<!--    hardDisk-->
+    <mat-form-field appearance="fill">
+      <mat-label>Hard disk</mat-label>
+      <input
+        type="number"
+        name="hardDisk"
+        matInput
+        formControlName="hardDisk"
+        placeholder="hardDisk"
+      />
+      <mat-error *ngIf="hardDisk && hardDisk.invalid && hardDisk.touched">hard disk is required.</mat-error>
+    </mat-form-field>
+    <br><br>
+<!--    price-->
+    <mat-form-field appearance="fill">
+      <mat-label>Price</mat-label>
+      <input
+        type="number"
+        name="price"
+        matInput
+        formControlName="price"
+        placeholder="price"
+      />
+      <mat-error *ngIf="price && price.invalid && price.touched">price is required.</mat-error>
+    </mat-form-field>
+    <br><br>
+<!--    save-->
+    <button
+      type="button"
+      mat-raised-button
+      color="primary"
+      (click)="onSubmit()"
+      [disabled]="laptopForm.invalid"
+      style="padding: 5px; width: 300px;">
+      Save
+    </button>
+  </form>
+  <br><br><br>
+  <br><br><br>
+</div>

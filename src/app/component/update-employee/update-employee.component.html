@@ -1,0 +1,71 @@
+<div class="container">
+  <br><br><br>
+  <h1>Update Employee Information</h1>
+  <mat-divider></mat-divider>
+  <br>
+  <form [formGroup]="employeeForm">
+    <!--    name-->
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input
+        type="text"
+        name="name"
+        matInput
+        formControlName="name"
+        placeholder="name"
+      />
+      <mat-error *ngIf="name && name.invalid && name.touched">name is required.</mat-error>
+    </mat-form-field>
+    <br><br>
+    <!--    department-->
+    <mat-form-field appearance="fill">
+      <mat-label>Department</mat-label>
+      <input
+        type="text"
+        name="department"
+        matInput
+        formControlName="department"
+        placeholder="department"
+      />
+      <mat-error *ngIf="department && department.invalid && department.touched">department is required.</mat-error>
+    </mat-form-field>
+    <br><br>
+<!--    shift-->
+    <mat-form-field appearance="fill">
+      <mat-label>Shift</mat-label>
+      <input
+        type="text"
+        name="shift"
+        matInput
+        formControlName="shift"
+        placeholder="shift"
+      />
+      <mat-error *ngIf="shift && shift.invalid && shift.touched">shift is required.</mat-error>
+    </mat-form-field>
+    <br><br>
+<!--    salary-->
+    <mat-form-field appearance="fill">
+      <mat-label>Salary</mat-label>
+      <input
+        type="number"
+        name="salary"
+        matInput
+        formControlName="salary"
+        placeholder="salary"
+      />
+      <mat-error *ngIf="salary && salary.invalid && salary.touched">salary is required.</mat-error>
+    </mat-form-field>
+    <br><br>
+<!--    save button-->
+    <button
+      type="submit"
+      name="save"
+      mat-raised-button
+      color="primary"
+      (click)="saveEmployee()"
+      [disabled]="employeeForm.invalid"
+      style="padding: 5px; width: 300px;">
+      Save
+    </button>
+  </form>
+</div>

@@ -1,0 +1,13 @@
+.container{
+  height: 100%;
+  width: 100%;
+  padding-left: 20px;
+
+  form{
+    height: 100%;
+    width: 100%;
+    mat-form-field{
+      width: 500px;
+    }
+  }
+}

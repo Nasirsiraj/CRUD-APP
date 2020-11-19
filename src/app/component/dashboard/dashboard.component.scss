@@ -1,0 +1,19 @@
+.container{
+  width: 100%;
+  height: 100%;
+  .sidenav{
+    width: 200px;
+    height: 100%;
+  }
+  .content{
+    padding: 5px;
+    height: 100%;
+  }
+}
+.card{
+
+  .card-header-image{
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+}

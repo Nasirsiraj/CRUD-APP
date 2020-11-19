@@ -1,0 +1,35 @@
+ <mat-drawer-container class="container">
+  <mat-drawer class="sidenav" mode="side" opened>
+    <mat-card class="card">
+      <mat-card-header>
+        <div mat-card-avatar class="card-header-image"></div>
+        <mat-card-title>CRUD APP</mat-card-title>
+      </mat-card-header>
+
+
+    </mat-card>
+    <mat-nav-list>
+      <mat-list-item routerLink="all-student">All Student</mat-list-item>
+      <mat-list-item routerLink="add-student">Add Student</mat-list-item>
+      <mat-list-item routerLink="all-teacher">All Teacher</mat-list-item>
+      <mat-list-item routerLink="add-teacher">Add Teacher</mat-list-item>
+      <mat-list-item routerLink="all-employee">All Employee</mat-list-item>
+      <mat-list-item routerLink="add-employee">Add Employee</mat-list-item>
+      <mat-list-item routerLink="all-book">All Book</mat-list-item>
+      <mat-list-item routerLink="add-book">Add Book</mat-list-item>
+      <mat-list-item routerLink="all-laptop">All Laptop</mat-list-item>
+      <mat-list-item routerLink="add-laptop">Add Laptop</mat-list-item>
+    </mat-nav-list>
+    <br><br><br>
+    <br><br><br>
+  </mat-drawer>
+   <div class="content">
+     <router-outlet></router-outlet>
+   </div>
+</mat-drawer-container>
+
+
+
+
+
+

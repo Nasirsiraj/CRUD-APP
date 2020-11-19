@@ -1,0 +1,100 @@
+<div class="container">
+  <br><br><br>
+  <h1>Update Student Information</h1>
+  <mat-divider></mat-divider>
+  <br>
+  <form [formGroup]="studentForm">
+<!--    name-->
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input
+        type="text"
+        name="name"
+        matInput
+        formControlName="name"
+        placeholder="name"
+      />
+      <mat-error *ngIf="name && name.invalid && name.touched">name is required.</mat-error>
+    </mat-form-field>
+    <br><br>
+<!--    roll-->
+    <mat-form-field appearance="fill">
+      <mat-label>Roll</mat-label>
+      <input
+        type="number"
+        name="roll"
+        matInput
+        formControlName="roll"
+        placeholder="roll"
+      />
+      <mat-error *ngIf="roll && roll.invalid && roll.touched">roll is required.</mat-error>
+    </mat-form-field>
+    <br><br>
+<!--    reg-->
+    <mat-form-field appearance="fill">
+      <mat-label>Reg no</mat-label>
+      <input
+        type="number"
+        name="reg"
+        matInput
+        formControlName="reg"
+        placeholder="reg no"
+      />
+      <mat-error *ngIf="reg && reg.invalid && reg.touched">reg no is required.</mat-error>
+    </mat-form-field>
+    <br><br>
+<!--    email-->
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input
+        type="text"
+        name="email"
+        matInput
+        formControlName="email"
+        placeholder="email"
+      />
+      <mat-error *ngIf="email && email.invalid && email.touched">email is required.</mat-error>
+    </mat-form-field>
+    <br><br>
+<!--    department-->
+    <mat-form-field appearance="fill">
+      <mat-label>Department</mat-label>
+      <input
+        type="text"
+        name="department"
+        matInput
+        formControlName="department"
+        placeholder="department"
+      />
+      <mat-error *ngIf="department && department.invalid && department.touched">department is required.</mat-error>
+    </mat-form-field>
+    <br><br>
+<!--    semester-->
+    <mat-form-field appearance="fill">
+      <mat-label>Semester</mat-label>
+      <input
+        type="text"
+        name="semester"
+        matInput
+        formControlName="semester"
+        placeholder="semester"
+      />
+      <mat-error *ngIf="semester && semester.invalid && semester.touched">semester is required.</mat-error>
+    </mat-form-field>
+    <br><br>
+    <button
+      type="submit"
+      name="save"
+      mat-raised-button
+      color="primary"
+      (click)="saveStudent()"
+      [disabled]="studentForm.invalid"
+      style="padding: 5px; width: 300px;"
+    >
+      Save
+    </button>
+
+  </form>
+  <br><br><br>
+  <br><br><br>
+</div>

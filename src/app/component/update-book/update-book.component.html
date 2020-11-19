@@ -1,0 +1,69 @@
+<div class="container">
+  <br><br><br>
+  <h1>Update Book Information</h1>
+  <mat-divider></mat-divider>
+  <br>
+  <form [formGroup]="bookForm">
+<!--    subject-->
+    <mat-form-field appearance="fill">
+      <mat-label>Subject</mat-label>
+      <input
+        type="text"
+        name="subject"
+        matInput
+        formControlName="subject"
+        placeholder="subject"
+      />
+      <mat-error *ngIf="subject && subject.invalid && subject.touched">subject is required.</mat-error>
+    </mat-form-field>
+    <br><br>
+<!--    bookName-->
+    <mat-form-field appearance="fill">
+      <mat-label>Book name</mat-label>
+      <input
+        type="text"
+        name="bookName"
+        matInput
+        formControlName="bookName"
+        placeholder="book name"
+      />
+      <mat-error *ngIf="bookName && bookName.invalid && bookName.touched">book name is required.</mat-error>
+    </mat-form-field>
+    <br><br>
+<!--    writerName-->
+    <mat-form-field appearance="fill">
+      <mat-label>Writer name</mat-label>
+      <input
+        type="text"
+        name="writerName"
+        matInput
+        formControlName="writerName"
+        placeholder="writer name"
+      />
+      <mat-error *ngIf="writerName && writerName.invalid && writerName.touched">writer name is required.</mat-error>
+    </mat-form-field>
+    <br><br>
+<!--    price-->
+    <mat-form-field appearance="fill">
+      <mat-label>Price</mat-label>
+      <input
+        type="number"
+        name="price"
+        matInput
+        formControlName="price"
+        placeholder="price"
+      />
+      <mat-error *ngIf="price && price.invalid && price.touched">price is required.</mat-error>
+    </mat-form-field>
+    <br><br>
+<!--    save button-->
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="saveBook()"
+      [disabled]="bookForm.invalid"
+      style="padding: 5px; width: 300px;">
+      Save
+    </button>
+  </form>
+</div>

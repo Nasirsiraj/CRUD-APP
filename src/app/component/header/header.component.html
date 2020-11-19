@@ -1,0 +1,58 @@
+<div class="container">
+  <mat-toolbar color="primary">
+    <button
+      mat-button
+      routerLink="home"
+      routerLinkActive="activated-route">
+      CRUD APP
+    </button>
+
+    <div class="spacer"></div>
+
+    <button
+      mat-button
+      routerLink="home"
+      routerLinkActive="activated-route">
+      Home
+    </button>
+
+    <button
+      mat-button
+      *ngIf="authenticationService.isUserLoggedIn()"
+      routerLink="dashboard"
+      routerLinkActive="activated-route">
+      Dashboard
+    </button>
+
+    <button
+      mat-button
+      *ngIf="authenticationService.isUserLoggedIn()"
+      routerLink="contact"
+      routerLinkActive="activated-route">
+      Contact
+    </button>
+
+    <button
+      mat-button
+      *ngIf="!authenticationService.isUserLoggedIn()"
+      routerLink="login"
+      routerLinkActive="activated-route">
+      Login
+    </button>
+
+    <button
+      mat-button
+      *ngIf="authenticationService.isUserLoggedIn()"
+      routerLink="logout"
+      routerLinkActive="activated-route">
+      Logout
+    </button>
+
+    <button
+      mat-icon-button
+      routerLink="."
+      routerLinkActive="activated-route">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+</div>

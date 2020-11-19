@@ -1,0 +1,54 @@
+<div class="container">
+  <table mat-table [dataSource]="employees">
+<!--    id column-->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>ID</th>
+      <td mat-cell *matCellDef="let employee">{{employee.id}}</td>
+    </ng-container>
+<!--    name column-->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let employee">{{employee.name}}</td>
+    </ng-container>
+<!--    department column-->
+    <ng-container matColumnDef="department">
+      <th mat-header-cell *matHeaderCellDef>Department</th>
+      <td mat-cell *matCellDef="let employee">{{employee.department}}</td>
+    </ng-container>
+<!--    shift column-->
+    <ng-container matColumnDef="shift">
+      <th mat-header-cell *matHeaderCellDef>Shift</th>
+      <td mat-cell *matCellDef="let employee">{{employee.shift}}</td>
+    </ng-container>
+<!--    salary column-->
+    <ng-container matColumnDef="salary">
+      <th mat-header-cell *matHeaderCellDef>Salary</th>
+      <td mat-cell *matCellDef="let employee">{{employee.salary}}</td>
+    </ng-container>
+<!--    action column-->
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef>Action</th>
+      <td mat-cell *matCellDef="let employee">
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="goToEditPage(employee.id)"
+          style="margin-right: 5px">
+          Edit
+        </button>
+        <button
+          mat-raised-button
+          color="warn"
+          (click)="deleteEmployee(employee.id)"
+          style="margin-left: 5px">
+          Delete
+        </button>
+      </td>
+    </ng-container>
+
+<!--    header row-->
+    <tr mat-header-row *matHeaderRowDef="tableColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: tableColumns"></tr>
+<!--    data row-->
+  </table>
+</div>

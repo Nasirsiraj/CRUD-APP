@@ -1,0 +1,43 @@
+<div class="container">
+  <br><br><br>
+  <h1>Please login to continue</h1>
+  <mat-divider></mat-divider>
+  <br>
+  <form [formGroup]="loginForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input
+        type="text"
+        name="name"
+        matInput
+        formControlName="name"
+        placeholder="name"
+      />
+      <mat-error *ngIf="name && name.invalid && name.touched">name is required.</mat-error>
+    </mat-form-field>
+    <br><br><br>
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input
+        type="password"
+        name="password"
+        matInput
+        formControlName="password"
+        placeholder="password"
+      />
+    </mat-form-field>
+    <br><br><br>
+    <button
+      type="submit"
+      mat-button
+      color="primary"
+      [disabled]="loginForm.invalid"
+      (click)="getLogin()">
+      Login
+    </button>
+  </form>
+  <br><br><br>
+  <br><br><br>
+  <br><br><br>
+  <br><br><br>
+</div>
